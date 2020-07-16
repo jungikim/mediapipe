@@ -74,3 +74,82 @@ cc_library(
         "//mediapipe/gpu:gpu_shared_data_internal",
     ],
 )
+
+cc_library(
+	name = "multi_hand_tracking_landmarks_gpu",
+	srcs = ["multi_hand_tracking_landmarks_gpu.cc"],
+	deps = [
+		"//mediapipe/calculators/util:landmarks_to_render_data_calculator",
+		"//mediapipe/framework:calculator_framework",
+		"//mediapipe/framework/formats:image_frame",
+		"//mediapipe/framework/formats:image_frame_opencv",
+		"//mediapipe/framework/formats:landmark_cc_proto",
+		"//mediapipe/framework/port:commandlineflags",
+		"//mediapipe/framework/port:file_helpers",
+		"//mediapipe/framework/port:opencv_highgui",
+		"//mediapipe/framework/port:opencv_imgproc",
+		"//mediapipe/framework/port:opencv_video",
+		"//mediapipe/framework/port:parse_text_proto",
+		"//mediapipe/framework/port:status",
+		"//mediapipe/gpu:gl_calculator_helper",
+		"//mediapipe/gpu:gpu_buffer",
+		"//mediapipe/gpu:gpu_shared_data_internal",
+	],
+)
+
+cc_library(
+	name = "multi_hand_tracking_landmarks_cpu",
+	srcs = ["multi_hand_tracking_landmarks_cpu.cc"],
+	deps = [
+		"//mediapipe/calculators/util:landmarks_to_render_data_calculator",
+		"//mediapipe/framework:calculator_framework",
+		"//mediapipe/framework/formats:image_frame",
+		"//mediapipe/framework/formats:image_frame_opencv",
+		"//mediapipe/framework/formats:landmark_cc_proto",
+		"//mediapipe/framework/port:commandlineflags",
+		"//mediapipe/framework/port:file_helpers",
+		"//mediapipe/framework/port:opencv_highgui",
+		"//mediapipe/framework/port:opencv_imgproc",
+		"//mediapipe/framework/port:opencv_video",
+		"//mediapipe/framework/port:parse_text_proto",
+		"//mediapipe/framework/port:status",
+	],
+)
+
+cc_library(
+	name = "multi_hand_tracking_landmarks_json_cpu",
+	srcs = ["multi_hand_tracking_landmarks_json_cpu.cc"],
+	deps = [
+		"//mediapipe/calculators/util:landmarks_to_render_data_calculator",
+		"//mediapipe/framework:calculator_framework",
+		"//mediapipe/framework/formats:image_frame",
+		"//mediapipe/framework/formats:image_frame_opencv",
+		"//mediapipe/framework/formats:landmark_cc_proto",
+		"//mediapipe/framework/port:commandlineflags",
+		"//mediapipe/framework/port:file_helpers",
+		"//mediapipe/framework/port:opencv_highgui",
+		"//mediapipe/framework/port:opencv_imgproc",
+		"//mediapipe/framework/port:opencv_video",
+		"//mediapipe/framework/port:parse_text_proto",
+		"//mediapipe/framework/port:status",
+	],
+)
+
+cc_library(
+	name = "multi_hand_tracking_landmarks_mp4json_cpu",
+	srcs = ["multi_hand_tracking_landmarks_mp4json_cpu.cc"],
+	deps = [
+		"//mediapipe/calculators/util:landmarks_to_render_data_calculator",
+		"//mediapipe/framework:calculator_framework",
+		"//mediapipe/framework/formats:image_frame",
+		"//mediapipe/framework/formats:image_frame_opencv",
+		"//mediapipe/framework/formats:landmark_cc_proto",
+		"//mediapipe/framework/port:commandlineflags",
+		"//mediapipe/framework/port:file_helpers",
+		"//mediapipe/framework/port:opencv_highgui",
+		"//mediapipe/framework/port:opencv_imgproc",
+		"//mediapipe/framework/port:opencv_video",
+		"//mediapipe/framework/port:parse_text_proto",
+		"//mediapipe/framework/port:status",
+	],
+)

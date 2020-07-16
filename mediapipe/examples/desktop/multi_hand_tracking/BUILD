@@ -40,3 +40,39 @@ cc_binary(
         "//mediapipe/graphs/hand_tracking:multi_hand_mobile_calculators",
     ],
 )
+
+cc_binary(
+	name = "multi_hand_tracking_landmarks_gpu",
+	deps = [
+		"//mediapipe/examples/desktop:multi_hand_tracking_landmarks_gpu",
+		"//mediapipe/graphs/hand_tracking:multi_hand_mobile_calculators",
+	],
+	linkstatic=False,
+)
+
+cc_binary(
+	name = "multi_hand_tracking_landmarks_cpu",
+	deps = [
+		"//mediapipe/examples/desktop:multi_hand_tracking_landmarks_cpu",
+		"//mediapipe/graphs/hand_tracking:multi_hand_desktop_tflite_calculators",
+	],
+	linkstatic=False,
+)
+
+cc_binary(
+	name = "multi_hand_tracking_landmarks_json_cpu",
+	deps = [
+		"//mediapipe/examples/desktop:multi_hand_tracking_landmarks_json_cpu",
+		"//mediapipe/graphs/hand_tracking:multi_hand_desktop_tflite_calculators",
+	],
+	linkstatic=False,
+)
+
+cc_binary(
+	name = "multi_hand_tracking_landmarks_mp4json_cpu",
+	deps = [
+		"//mediapipe/examples/desktop:multi_hand_tracking_landmarks_mp4json_cpu",
+		"//mediapipe/graphs/hand_tracking:multi_hand_desktop_tflite_calculators",
+	],
+	linkstatic=False,
+)
